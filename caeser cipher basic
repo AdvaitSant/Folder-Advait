@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+   int i,key;
+   string inp;
+   cout<<"Enter a string: ";
+   cin>>inp;
+   cout<<"Enter a key: ";
+   cin>>key;
+   for(i=0;i<inp.size();i++)
+   {
+        if(isupper(inp[i]))
+        {
+                inp[i]=char((inp[i]-65+key+1)%26+65);
+                cout<<inp[i];
+        }
+        else
+        {
+                inp[i]=char((inp[i]-97+key+1)%26+97);
+                cout<<inp[i];
+        }
+   }
+    
+    return 0;
+}
